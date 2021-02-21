@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} display User {% endblock %}
+{% block body %}
+<h1>User</h1>
+
+<table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ user.name }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('userindex') }}">Back to user list</a>
+
+    <a href="{{ path('updateuser', {'id': user.id}) }}">Update</a>
+
+{% endblock %}
